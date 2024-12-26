@@ -1,6 +1,7 @@
 import mongoose, { Schema, Document } from "mongoose";
 
 // Define an interface for the Service document
+
 export interface IService extends Document {
   name: string;
   description: string;
