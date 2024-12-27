@@ -1,5 +1,4 @@
 import express, { Application } from 'express';
-import mongoose from 'mongoose';
 const app: Application = express();
 const PORT = 4000;
 
