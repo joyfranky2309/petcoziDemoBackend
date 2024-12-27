@@ -9,7 +9,7 @@ interface IReview {
     createdAt: Date;
 }
 
-interface ICommonProduct extends Document {
+interface IProduct extends Document {
     category: ProductCategory;
     name: string;
     description: string;
@@ -20,21 +20,22 @@ interface ICommonProduct extends Document {
     quantity: number;
     reviews: IReview[];
     discount: number;
+    images: { url: string; alt?: string }[]; 
     supplier_id: string;
     storage_location: string;
 }
 
-interface IProductFood extends ICommonProduct {
+interface IProductFood extends IProduct {
     pet_type: string;
     product_Type: string;
 }
 
-interface IProductAccesories extends ICommonProduct {
+interface IProductAccesories extends IProduct {
     pet_type: string;
     accessory_Type: string;
 }
 
-interface IProductPharma extends ICommonProduct {
+interface IProductPharma extends IProduct {
     pet_type: string;
     pharma_Type: string;
     prescription_required: boolean;

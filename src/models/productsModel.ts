@@ -1,5 +1,5 @@
 import mongoose, { Schema } from 'mongoose';
-import { IReview, IProductFood, IProductAccesories, IProductPharma } from './productInterfaces';
+import { IReview, IProductFood, IProductAccesories, IProductPharma } from './Interfaces/productInterfaces';
 
 const reviewSchema = new Schema<IReview>({
     userId: { type: String, required: true },
